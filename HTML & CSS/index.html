@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsplash Clone</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/index.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <!-- UPPER -->
+        <div class="nav nav--upper">
+            <!-- LOGO -->
+            <div class="nav__logo-ctn">
+                <img class="icon icon--logo" src="./images/logo.svg" alt="logo">
+                <div class="nav__logo-brand">
+                    <span class="nav__brand-name"><b>Unsplash</b></span>
+                    <span class="nav__brand-quote">Photos for everyone</span>
+                </div>
+            </div>  
+            <!-- SEARCH BAR -->
+            <div class="search-bar">
+                <form>
+                    <button type="submit" class="button button--no-border button--no-bgr">
+                            <img class="icon icon--search" src="./images/search.svg" alt="search"></img>
+                        </button>
+                    <label htmlFor='input--sbar'></label>
+                    <input 
+                        type="text"
+                        class="input--sbar" 
+                        id="input--sbar"
+                        placeholder="Search free high-resolution photos">
+                </form>
+                <img class="icon icon--qr" src="./images/qr.svg" alt="qr"></img>
+            </div>
+            <!-- NAV ITEMS -->
+            <div class="nav__items nav__items--upper">
+                <span class="nav__items-toggler">
+                    <img 
+                        class="icon icon--toggler"
+                        src="./images/toggler.svg"
+                        alt="Items toggler">
+                </span>
+                <ul class="nav__items">
+                    <li class="nav__item" style="--nav-items-order: 1">
+                        <a href="#">Brands</a>
+                    </li>
+                    <li class="nav__item" style="--nav-items-order: 2">
+                        <a href="#">Explore</a>
+                    </li>
+                    <li class="nav__item" style="--nav-items-order: 3">
+                        <a href="#">Blog</a>
+                    </li>
+                    <li class="nav__separator"></li>                    
+                    <li class="nav__item" style="--nav-items-order: 4">
+                        <button class="button button--nav button--white button--no-border">Sign Up</button>
+                    </li>
+                    <li class="nav__item" style="--nav-items-order: 5">
+                        <button class="button button--nav button--green button--no-border">Sign In</button></li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- BELOW -->
+        <div class="nav nav--below">
+            <ul class="nav__items">
+                <li><a href="#">Editorial</a></li>
+                <li class="nav__main-items">
+                    <ul>
+                        <li class='nav__item'><a href="#">Technology</a></li>
+                        <li class='nav__item'><a href="#">Summer on Film</a></li>
+                        <li class='nav__item'><a href="#">Wallpapers</a></li>
+                        <li class='nav__item'><a href="#">Experimental</a></li>
+                        <li class='nav__item'><a href="#">Nature</a></li>
+                        <li class='nav__item'><a href="#">People</a></li>
+                        <li class='nav__item'><a href="#">Architecture</a></li>
+                        <li class='nav__item'><a href="#">Current Events</a></li>
+                        <li class='nav__item'><a href="#">Business & Works</a></li>
+                        <li class='nav__item'><a href="#">Fashion</a></li>
+                        <li class='nav__item'><a href="#">Film</a></li>
+                        <li class='nav__item'><a href="#">Health & Wealth</a></li>
+                        <li class='nav__item'><a href="#">Sport</a></li>
+                    </ul>
+                </li>
+                <li id="view-more">
+                    <img class='icon' src="./images/next.svg" alt="See all">
+                    <a href="#">View all</a>
+                </li>
+            </ul>        
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <!-- INTRO -->
+       <section class="intro">
+           <!-- BACKGROUND -->
+            <div class="intro__bgr"></div>
+            <!-- JUMBOTRON -->
+            <div class="intro__jumbotron">
+                <!-- HEADER -->
+                <header>
+                    <h1>Unsplash</h1>
+                    <p>The internet's source of <a href="#">freely-usable images</a>.</p>
+                    <p>Powered by creators everywhere.</p>
+                </header>
+                <!-- SEARCH BAR -->
+                <div class="search-bar search-bar--jumbotron">
+                    <form>
+                        <button type="submit" class="button button--no-border button--no-bgr">
+                            <img class="icon icon--search" src="./images/search.svg" alt="search"></img>
+                        </button>
+                        <label htmlFor='input--jumbotron'></label>
+                        <input 
+                            type="text"
+                            class="input-sbar input-sbar--jumbotron"
+                            id="input--jumbotron"
+                            placeholder="Search free high-resolution photos">
+                    </form>
+                    <img class="icon icon--qr" src="./images/qr.svg" alt="qr"></img>
+                    <!-- SEARCH SUGGESTION -->
+                    <div class="search-suggestions">
+                        <div class="suggestions-container">
+                            <header>
+                                <h4>May one of them be your search?</h4>
+                            </header>
+                            <ul class="suggestions__list">
+                                <li>
+                                    <span class="suggestion" style="--suggestion-order: 1">Lego</span>
+                                </li>
+                                <li>
+                                    <span class="suggestion" style="--suggestion-order: 2">Surfing</span>
+                                </li>
+                                <li>
+                                    <span class="suggestion" style="--suggestion-order: 3">Camera</span>
+                                </li>
+                                <li>
+                                    <span class="suggestion" style="--suggestion-order: 4">Soccer</span>
+                                </li>
+                                <li>
+                                    <span class="suggestion" style="--suggestion-order: 5">Volleyball</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- FOOTER -->
+                <footer class="footer footer--jumbotron">
+                    <p>Trending: <span><a href="#">flower</a></span>, <span><a href="#">human</a></span>, <span><a href="#">car</a></span>.</p>
+                </footer>
+            </div>
+            <!-- FOOTER -->
+            <footer class="footer footer--intro">
+                <p><a href="#">Photo of the Day</a></p>
+                <p>Read more about the <a href="#">Unsplash</a></p>
+                <p>Start your website with <a href="#">Something</a> today.</p>
+            </footer>
+        </section> 
+
+        <!-- COLLECTION -->
+        <section class="collection">
+            <div class="collection__container">
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c1.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c2.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c3.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c4.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c5.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c6.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c7.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c8.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c9.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+                <!-- CARD -->
+                <div class="card">
+                    <div class="card__utils card__utils--upper">
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/love.svg'></img>
+                        <img 
+                            class="icon icon--card"
+                            alt="Love this photo"
+                            src='./images/add.svg'></img>
+                    </div>
+                    <img class="card__img" src="./images/c10.webp" alt="collection-image">
+                    <div class="card__utils card__utils--below">
+                        <div class="card__img__owner">
+                            <img 
+                                class="icon icon--avatar icon--clickable"
+                                src='https://images.unsplash.com/photo-1597626133663-53df9633b799?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80' 
+                                alt='owner'></img>
+                            <div class="owner-info">
+                                <span><a href="#">Lorem Ipsum</a></span>
+                                <br>
+                                <span>Just a cat person :D</span>
+                            </div>
+                        </div>
+                        <img 
+                            class="icon icon--card"
+                            src='./images/save.svg' 
+                            alt='owner'></img>
+                    </div>
+                </div>
+            </div> 
+            <!-- LOADING -->
+            <div class="collection__loading">
+                <span id="dot1" style="--order: 1">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot2" style="--order: 2">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot3" style="--order: 3">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot4" style="--order: 4">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot5" style="--order: 5">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot6" style="--order: 6">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+                <span id="dot7" style="--order: 7">
+                    <img class='icon' src="./images/loading.svg" alt="collection-image">
+                </span>
+            </div>
+
+        </section>
+    </main>
+
+</body>
+</html>

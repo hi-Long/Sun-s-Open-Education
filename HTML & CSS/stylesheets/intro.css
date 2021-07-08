@@ -1,0 +1,78 @@
+.intro {
+    height: calc(100vh - var(--navbar-height));
+
+    position: relative;
+
+}
+
+.intro__bgr {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    background-image: url('../images/intro.jfif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(.7);
+}
+
+.intro__jumbotron {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 60%;
+
+    color: white;
+}
+
+.intro__jumbotron > header h1 {
+    font-size: 3rem;
+}
+
+.intro__jumbotron > header > p a {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+/* SEARCH BAR JUMBOTRON */
+.search-bar--jumbotron {    
+    display: flex;
+    padding: 0 1rem;
+    border-radius: 5px;    
+    background-color: var(--search-bar--jumbotron-color);
+}
+
+.search-bar--jumbotron:focus-within {
+    box-shadow: 0px 0px 1px 4px #b2b2b280;
+}
+
+.input-sbar--jumbotron {
+    font-size: 1.1rem;
+    line-height: 3rem;
+}
+
+.footer--intro {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: lightgray;
+    font-size: .8rem;
+}
+
+.footer--intro p a {
+    color: whitesmoke;
+}
+
+.search-bar--jumbotron footer span {
+    color: var(--text-gray);
+}
+
