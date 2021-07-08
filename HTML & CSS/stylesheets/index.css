@@ -1,0 +1,282 @@
+/* 766 */
+/* 1025 navbar */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('./navbar.css');
+@import url('./intro.css');
+@import url('./collection.css');
+
+:root {
+    --navbar-height: 8.5rem;
+
+    --icon-size: 1rem;
+
+    --font-size-05: .5rem; 
+    --font-size-08: .8rem; 
+    --font-size-1: 1rem; 
+    --font-size-15: 1.5rem; 
+    --margin-01: 1rem;
+
+    --search-bar--nav-color: lightgray;
+    --search-bar--jumbotron-color: white;
+
+    --button-green: #3cb46e;
+    --text-gray: dimgray;
+
+    --nav-item--font: 14px;
+
+    --break-point--sm: 576px;
+    --break-point--md: 800px;
+    --break-point--lg: 1200px;
+
+    --suggestion-appear: .2s;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    padding-top: var(--navbar-height);
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    background-color: inherit;
+    color: dimgray;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ------ */
+/* BUTTON */
+/* ------ */
+button {
+    font-family: inherit;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button--nav {
+    padding: 0rem 1.5rem;
+    height: 100%;
+}
+
+.button--no-border {
+    outline: none;
+    border: none;
+}
+
+.button--white {
+    background-color: white;
+    color: dimgray;
+}
+
+.button--green {
+    background-color: var(--button-green);
+    color: white;
+}
+
+.button--no-bgr {
+    background-color: inherit;
+}
+
+/* ---- */
+/* ICON */
+/* ---- */
+.icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+}
+
+.icon--clickable {
+    cursor: pointer;
+}
+
+.icon--logo {
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.icon--card {
+    padding: .5rem;
+    border-radius: 10px;
+
+    background-color: gray;
+    filter: invert(99%) sepia(1%) saturate(6887%) hue-rotate(174deg) brightness(95%) contrast(82%);
+}
+
+.icon--card:hover {
+    filter: invert(100%) sepia(2%) saturate(741%) hue-rotate(80deg) brightness(113%) contrast(87%);
+    background-color: mediumaquamarine;
+}
+
+.icon--card:hover {
+    cursor: pointer;
+}
+
+.icon--avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+
+    margin-right: .5rem;
+}
+
+/* ---------- */
+/* SEARCH BAR */
+/* ---------- */
+.search-bar {
+    display: flex;
+    align-items: center;
+    transition: .2s;
+}
+
+.search-bar form {
+    flex-grow: 1;
+    display: flex;
+}
+
+.input-sbar {
+    width: 100%;
+}
+
+/* SUGGESTION */
+.search-suggestions {
+    position: absolute;
+
+    width: 100%;
+    max-height: max-content;
+    
+    left: 0;
+    bottom: -5.5rem;
+    
+    border-radius: 5px;
+    
+    background-color: white;
+    color: var(--text-gray);
+    
+    opacity: 0;
+
+    box-sizing: content-box;
+    z-index: -1;
+    
+    transition: var(--suggestion-appear);
+}
+
+.search-suggestions header h4 {
+    margin: 0 0 1rem 0;
+}
+
+.suggestions-container {
+    padding: 1rem;
+}
+
+.suggestions__list {    
+    overflow: hidden;
+}
+
+.suggestions__list li, 
+.suggestions-container > header {
+    display: flex;
+}
+
+.suggestions-container > header {
+    transform: translateX(-1rem);
+    opacity: 0;
+    
+    transition: .1s;
+    transition-delay: .1s;
+}
+
+.suggestion {
+    padding: .5rem 1rem;
+    margin-right: 1rem;
+    border: 1px solid var(--text-gray);
+    border-radius: 5px;
+    
+    transform: translateY(1rem);
+    opacity: 0;
+    
+    transition: 
+        transform .1s linear calc(var(--suggestion-order) * .1s + var(--suggestion-appear)),
+        opacity .1s linear calc(var(--suggestion-order) * .1s + var(--suggestion-appear)),
+        border .1s,
+        color .1s;
+
+    cursor: pointer;
+}
+
+/* ANIMATION */
+.suggestion:hover {
+    border: 1px solid chocolate;
+    color: chocolate;
+}
+
+.search-bar:focus-within .search-suggestions {
+    opacity: 1;
+    z-index: 33;
+}
+
+.search-bar:focus-within .suggestions-container > header {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.search-bar:focus-within .search-suggestions {
+    bottom: -6.5rem;    
+}
+
+.search-bar:focus-within .suggestion {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* ICON */
+.icon--search {
+    width: 1rem;
+    height: 1rem;
+    
+    margin-right: var(--margin-01);
+}
+
+.icon--qr {
+    width: 1rem;
+    height: 1rem;
+    
+    margin-left: var(--margin-01);
+}
+
+@media (max-width: 600px) {
+    .search-bar--jumbotron {
+        display: none;
+    }
+}
+
+@media (max-height: 600px) {
+    .intro__jumbotron p:last-child,
+    .search-bar--jumbotron {
+        display: none;
+    }
+}
+
+
+
+
+
+
