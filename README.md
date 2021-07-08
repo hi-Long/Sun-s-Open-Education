@@ -1,1 +1,1 @@
-# Sun-s-Open-Education
+# Sun-Open-Education
