@@ -65,7 +65,7 @@
 }
 
 /* OWNER INFO */
-.card__img__owner {
+.card__owner {
     display: flex;
 }   
 
@@ -75,15 +75,15 @@
     margin-top: 1rem;
 }
 
-.owner-info span {
+.card__owner-info span {
     color: whitesmoke;
 }
 
-.owner-info span:hover {
+.card__owner-info span:hover {
     color: white;
 }
 
-.owner-info span:last-child {
+.card__owner-info span:last-child {
     font-size: .8rem;
 }   
 
