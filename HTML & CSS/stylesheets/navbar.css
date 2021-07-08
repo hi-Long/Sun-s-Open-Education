@@ -63,6 +63,7 @@
 }
 
 .nav--upper .input--sbar {
+    flex: 1;
     height: 2.2rem;
     line-height: 1rem;
 }
@@ -238,7 +239,6 @@
         color: whitesmoke;
         
         transition: .2s;
-        pointer-events: none;
     }
     
     .nav__items--upper:hover .nav__items-toggler {
@@ -265,8 +265,13 @@
         opacity: 1;
     }   
     
-    .nav__items--upper .nav__items a {
-        color: whitesmoke;
+    .nav__items--upper .nav__item {
+        transition: .1s;
+        color: white;
+    }
+
+    .nav__items--upper .nav__item:hover {
+        color: var(--button-green);
     }
     
     .nav__items--upper .nav__item button {
