@@ -176,7 +176,6 @@
 /* RIGHT */
 #view-more {
     flex-shrink: 0;
-    
     position: relative;
 
     display: flex;
