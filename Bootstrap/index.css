@@ -39,6 +39,12 @@ CATEGORIES */
   display: none;
 }
 
+.categories__main-list {
+    overflow: auto;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none;
+}
+
 .categories__main-list .list-group-item:hover {
     color: white;
 }
