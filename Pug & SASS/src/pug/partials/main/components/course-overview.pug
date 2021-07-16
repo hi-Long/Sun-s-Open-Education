@@ -1,0 +1,27 @@
+mixin courseOverview(props)
+    .course__overview.card.border-0.pe-2
+        img.card-img-top(
+            src=`${props.cover}`
+            alt='Course cover'
+        )
+        //- CARD BODY
+        .card-body.ps-0.pe-0 
+            //- TITLE
+            h5.course__overview-title= props.title 
+            //- TUTORS
+            p.course__overview-tutors.text-gray
+                each tutor in props.tutors
+                    span #{tutor}
+            //- RATE
+            p.d-flex.align-items-center
+                span.course__overview-rate.text-golden.me-2=   props.rate 
+                each val in [0, 1, 2, 3]
+                    img.icon.icon--card(
+                        src='../../../../../assets/icons/full-star.svg'
+                    )
+                span.course__overview-noVotes.text-gray.ms-2   (#{props.noVotes})
+            //- PRICE + TAG
+            h5.course__overview-price.d-flex.justify-content-between.align-items-center   
+                span    #{props.price}$
+                include ./course-tag
+                +courseTag(props.tag)

@@ -1,0 +1,12 @@
+@use '../../../base/variables' as v;
+@use '../../../base/mixins';
+
+.nav__below-subcategories {
+    .nav__below-subcategory{
+        transition: .2s;
+        &:hover {
+            background-color: white!important;
+            color: black!important;
+        }
+    }
+}

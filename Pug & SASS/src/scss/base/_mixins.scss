@@ -1,0 +1,60 @@
+@mixin button($type, $width, $height, $padding, $margin, $color) {
+    
+}
+
+@mixin position($position, $top: 0, $left: 0, $padding: 0, $margin: 0, $border: 0, $type: 'none') {
+    padding: $padding;
+    margin: $margin;
+    @if $position == fixed or $position == absolute {
+        position: $position;
+        top: $top;
+        left: $left;
+        @if $position == absolute {
+            @if $type == centerVertical {
+                top: 50%;
+                left: $left;
+                transform: translateY(-50%);
+            } @else if $type == centerHorizontal {
+                top: $top;
+                left: 50%;
+                transform: translateX(-50%);
+            } @else if $type == center {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            } 
+        }
+    }
+}
+
+@mixin transitionPreviousProps($opacity: 0, $transform, $color: currentColor, $backgroundColor: currentColor, $transition: .2s, $zIndex: inherit) {
+    opacity: $opacity;
+    transform: $transform;
+    color: $color;
+    background-color: $backgroundColor;
+    transition: $transition;
+    z-index: $zIndex;
+}
+
+@mixin transitionDoneProps ($opacity: 1, $transform, $color: currentColor, $backgroundColor: currentColor, $zIndex: inherit) {
+    opacity: $opacity;
+    transform: $transform;
+    color: $color;
+    background-color: $backgroundColor;
+    z-index: $zIndex;
+}
+
+@mixin arrow($direction, $size, $backgroundColor) {
+    width: 0;
+    height: 0;
+    border: $size solid transparent;
+    @if $direction == left {
+        border-right: $size solid $backgroundColor
+    } @else if $direction == right {
+        border-left: $size solid $backgroundColor
+    } @else if $direction == up {
+        border-bottom: $size solid $backgroundColor
+    } @else if $direction == down {
+        border-top: $size solid $backgroundColor
+    }
+}

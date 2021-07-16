@@ -1,0 +1,15 @@
+@use '../../../base/variables' as v;
+@use '../../../base/mixins';
+@use '../comps/search-bar';
+@use './search-modal';
+@use './dropdown-item';
+
+.nav__upper {
+    .nav-item {
+        line-height: v.$nav-line-height;
+    }
+    &-logo {
+        width: v.$logo-size;
+        height: auto;
+    }
+}

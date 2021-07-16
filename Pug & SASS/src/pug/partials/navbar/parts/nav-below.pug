@@ -1,0 +1,24 @@
+-
+    const categories = [
+        {name: 'Development', subCates: ['Web development', 'Mobile development', 'Programming Languages', 'Game Development', 'Database Design', 'Software Testing']},
+        {name: 'Business', subCates: ['Entrepreneurship', 'Communication', 'Management', 'Sales', 'Business Strategy']},
+        {name: 'Finance & Accounting', subCates: ['Accounting & Bookkeeping', 'Cryptocurrency & Blockchain', 'Finance', 'Financial Modeling & Analysis', 'Investing & Trading']},
+        {name: 'IT Software',subCates: ['IT Certifications', 'Network & Security', 'Hardware', 'Operating System', 'Other IT & Software']},
+        {name: 'Office Productivity', subCates: ['Microsoft', 'Apple', 'Google', 'SAP', 'Oracle', 'Other Office Productivity']}, 
+        {name: 'Personal Development', subCates: ['Personal Transformation', 'Leadership', 'Career Development', 'Parenting & Relationship']}, 
+        {name: 'Design', subCates: ['Web Design', 'Graphic Design & Illustration', 'Design Tools', 'User Experience Design', 'Game Design', 'Design Thinking']},
+        {name: 'Marketing', subCates: ['Digital Marketing', 'Search Engine Optimization', 'Social Media Marketing', 'Branding', 'Marketing Fundamentals', 'Marketing Analytic']},
+        {name: 'Fitness & Health', subCates: ['Fitness', 'General Health', 'Sports', 'Nutrition', 'Yoga', 'Mental Health']},
+        {name: 'Music', subCates: ['Instrument', 'Music Production', 'Music Fundamentals', 'Vocal', 'Music Technique', 'Music Software']}
+    ]
+
+.nav__below.mt-2.d-none.d-md-block
+    //- MAIN CATEGORIES
+    ul.nav__below-categories.list-group.flex-row.justify-content-between.align-items-center.position-relative
+        each category in categories 
+            //- SUBCATEGORIES
+            .nav__below-category-ctn.p-2.flex-shrink-0
+                li.nav__below-category.list-group-item.border-0.bg-inherit= category.name 
+                include ../components/subcategories
+                +subcategories(category.subCates)
+        

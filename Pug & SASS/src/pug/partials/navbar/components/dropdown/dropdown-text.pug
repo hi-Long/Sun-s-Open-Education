@@ -1,0 +1,9 @@
+mixin dropdownText(props)
+    li.nav-item.nav-item--dd.position-relative.flex-shrink-0.d-none.d-lg-block
+        //- TEXT
+        a.nav-link(href='#')= props.name
+        //- DD CONTENT
+        .nav-item--dd__dd.nav-item--dd__dd--text.position-absolute.top-100.end-0.p-4.text-center.bg-white.rounded-5
+            p.nav__dd-content.mb-3.fs-5=  props.content
+            button.btn.btn-primary.btn-md(type='button') 
+                a.text-white(href='#')=  props.redirect

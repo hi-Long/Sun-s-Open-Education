@@ -1,0 +1,14 @@
+//- REUSE -//
+mixin navItem(dropdown, props)
+    if dropdown
+        case props.style
+            when 'text'
+                include ./dropdown-text
+                +dropdownText(props)
+            when 'icon'
+                include ./dropdown-icon
+                +dropdownIcon(props)
+            when 'avatar'
+                include ./dropdown-avatar
+                +dropdownAvatar(props)
+                

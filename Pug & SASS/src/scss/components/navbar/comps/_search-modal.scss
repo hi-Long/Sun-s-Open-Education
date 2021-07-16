@@ -1,0 +1,24 @@
+@use '../../../base/variables' as v;
+@use '../../../base/mixins' as m;
+@use '../../../base/global' as g;
+
+.modal--search {
+    .modal-content {
+        .modal-body {
+            .modal__search-suggestions {
+                .modal__search-suggestion {
+                    background-color: aqua;
+                    @include m.transitionPreviousProps(
+                        $transform: translateX(-1rem),
+                        $transition: .2s calc(var(--suggestion-order)*0.1s)
+                    )
+                }
+            }
+        }
+        .modal-header:focus-within ~ .modal-body .modal__search-suggestion {
+            @include m.transitionDoneProps(
+                $transform: translateX(0rem)
+            )
+        }
+    }
+}

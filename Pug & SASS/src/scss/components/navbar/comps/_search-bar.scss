@@ -1,0 +1,21 @@
+@use '../../../base/variables' as v;
+
+.sbar {
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: .2rem;
+    border: 1px solid lightgray;
+    background-color: inherit;
+
+    &__input {
+        flex-grow: 1;
+        margin-right: .5rem;
+        line-height: v.$nav-line-height;
+    }
+
+    &--nav {
+        width: 90%;
+    }
+}

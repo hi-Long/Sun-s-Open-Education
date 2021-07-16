@@ -1,0 +1,18 @@
+mixin dropdownIcon(props)
+    if props.hideOnMed == true
+        li.nav-item.nav-item--dd.position-relative.flex-shrink-0.d-none.d-md-block
+            +dropdownBody(props)
+    else
+        li.nav-item.nav-item--dd.position-relative.flex-shrink-0
+            +dropdownBody(props)
+
+mixin dropdownBody(props)
+    //- ICON
+    a.nav-link(href='#')
+        img.icon.icon--nav(src=`${navImgSrc}/${props.name}`)
+    //- DD CONTENT
+    .nav-item--dd__dd.nav-item--dd__dd--text.position-absolute.top-100.end-0.p-4.text-center.bg-white.rounded-5
+        p.nav__dd-content.mb-3=  props.content
+        if props.redirect
+            button.btn.btn-primary.btn-sm(type='button') 
+                a.text-white(href='#')=  props.redirect

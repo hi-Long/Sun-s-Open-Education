@@ -1,0 +1,18 @@
+mixin searchForm(type)
+    case type
+        when 'nav'
+            form.sbar.sbar--nav.rounded-40
+                +formBody
+        when 'smodal'
+            form.sbar.sbar--smodal.flex-grow-1.border-0.rounded-40
+                +formBody
+
+//- FORM BODY
+mixin formBody
+    label(for="sbar__input")
+    img.icon.icon--nav(
+        src=`${navImgSrc}/search.svg`,
+        alt="")
+    input.sbar__input(type="text", placeholder='Search for a course')  
+
+

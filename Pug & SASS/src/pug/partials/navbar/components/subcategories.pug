@@ -1,0 +1,4 @@
+mixin subcategories(props)
+    ul.nav__below-subcategories.list-group.flex-row.position-absolute.top-100.start-0.w-100.justify-content-center.rounded-0
+        each category in props
+            a.nav__below-subcategory.list-group-item.list-group-item-action.w-auto.flex-shrink-0.border-0.text-center.bg-inherit.text-white(href='#')= category

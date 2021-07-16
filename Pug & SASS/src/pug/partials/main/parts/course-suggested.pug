@@ -1,0 +1,40 @@
+- 
+    let suggestedCourse = {
+        title: 'The complete Web Developer Course 2.0',
+        tutors: 'By a cat, a rat, a mouse and a bird',
+        description: 'Learn Web Development by building 25 websites and mobile apps using HTML, CSS, Javascript, PHP, Python, MySQL & more!',
+        lastUpdate: 'Updated June 2021',
+        length: '300 hours',
+        lectures: '207 lectures',
+        rate: 4.4,
+        noVotes: 23490,
+        price: 12.99
+    }
+
+.h4.mb-4.mt-5.fw-bolder  Our top pick for you 
+.course__suggested.container.border.border-1.rounded
+    .row.p-3
+        //- COVER
+        .course__suggested-cover.col-12.col-md-6.mb-3.mb-md-0
+            a(href='#')
+                img.card-img-top.w-80(
+                    src='../../../../../assets/images/suggested-course.png',
+                    alt='Course cover'
+                )
+        //- COURSE CONTENT
+        .col-12.col-md-6.d-flex.flex-column.justify-content-between 
+            div
+                a.text-inherit.fs-2.fw-bold(href='#')=    suggestedCourse.title
+                p.course__suggested-short-description= suggestedCourse.description 
+                p.course__suggested-tutors.text-gray= suggestedCourse.tutors 
+                p.course__suggested-props
+                    span.text-darkslategray.fw-bold #{suggestedCourse.lastUpdate} -
+                    span.text-gray    #{suggestedCourse.length} - #{suggestedCourse.lectures} - All levels
+                p.d-flex.align-items-center
+                    span.course__overview-rate.text-golden.me-2=   suggestedCourse.rate 
+                    each val in [0, 1, 2, 3]
+                        img.icon.icon--card(
+                            src='../../../../../assets/icons/full-star.svg'
+                        )
+                    span.course__overview-noVotes.text-gray.ms-2   (#{suggestedCourse.noVotes})
+            span.course__overview-price.fs-4.fw-bold    #{suggestedCourse.price}$  

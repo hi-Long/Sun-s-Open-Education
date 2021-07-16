@@ -1,0 +1,35 @@
+mixin courseDetail(props)
+    //- LAST CARD OF THE CAROUSEL
+    if props.lastCard
+        .course__details.course__details--left.card.d-none.d-md-block.position-absolute.top-0.end-100.me-2.w-max
+            +cardBody(props)
+    //- NOT THE LAST CARD OF THE CAROUSEL
+    else
+        .course__details.course__details--right.card.d-none.d-md-block.position-absolute.top-0.start-100.w-max
+            +cardBody(props)
+
+//- CARD BODY
+mixin cardBody(props) 
+    .card-body.position-relative
+        //- TITTLE
+        h4.card-title.mb-3=   props.title
+        //- TAG + UPDATED
+        p
+            include ./course-tag
+            +courseTag(props.tag)
+            span.fw-bold.text-darkslategray    Updated #{props.lastUpdated}
+        //- LENGTH 
+        p.fs-6.text-gray    
+            span.course__length    #{props.length} total hours -
+            span.course__level  All level -
+            span.course__subtitle  Subtitle 
+        //- DESC
+        p.course__short-description.card-text=  props.shortDescription
+        //- GOALS
+        ul.course__goals.list-group-item.border-0 
+            each goal in props.goals 
+                li.course__goal.list-item=  goal
+        //- REDIRECT
+        .course__redirect.d-flex.justify-content-between
+            a.btn.btn-danger.btn-lg.pe-5.ps-5(href="#") Add to cart
+            img.icon.icon--course-details(src="../../../../assets/icons/like.svg", alt="Add to cart")
