@@ -1,0 +1,98 @@
+@use './variables' as v;
+@use './mixins' as m;
+
+:root {
+    @each $bg in v.$background {
+        .bg-#{$bg} {
+            background-color: #{$bg}!important;
+        }
+    }
+    @each $textColor in v.$text-color {
+        .text-#{$textColor} {
+            color: #{$textColor}!important;
+        }
+    }
+    @each $width in v.$width {
+        .w-#{$width} {
+            width: #{$width};
+        }
+    }
+    @each $color in v.$border-color {
+        .border-#{$color} {
+            border-color: #{$color};
+        }
+    }
+    @each $radiusType, $val in v.$radius {
+        .rounded-#{$radiusType} {
+            border-radius: #{$val};
+        }
+    }
+    @each $iconType, $val in v.$icon-size {
+        .icon-size-#{$iconType} {
+            width: $val;
+            height: auto;
+        }
+    }
+}
+
+body {
+    padding-top: 8.5rem;
+    overflow-x: hidden;
+
+    @media (max-width: 768px) {
+        padding-top: 6rem;
+    }
+}
+
+.btn {
+    &:focus,
+    &:active {
+        outline: none !important;
+        box-shadow: none;
+    }
+}
+
+.icon {
+    width: v.$icon-size-1;
+    height: v.$icon-size-1;
+
+    &--nav {
+        margin: 0 .5rem;
+        width: v.$icon-size-2;
+        height: auto;
+    }
+
+    &--course-details,
+    &--nav-modal {
+        width: v.$icon-size-2;
+        height: auto;
+    }
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: inherit;
+}
+
+a {
+    text-decoration: none!important;
+    cursor: pointer;
+}
+
+.list-group-item{
+    color: inherit!important;
+    &--nav-modal {
+        @include m.transitionPreviousProps(
+            $opacity: 1,
+            $transform: translateX(0),
+            $transition: .2s
+        );
+        &:hover {
+            @include m.transitionDoneProps(
+               $transform: translateX(1rem),
+               $backgroundColor: inherit!important
+            )
+        }     
+    }
+}

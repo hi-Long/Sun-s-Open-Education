@@ -1,0 +1,29 @@
+-   
+    let ddItems = [
+        {items:['My learning', 'My cart', 'Wishlist', 'Teach on Udemy']},
+        {category: 'Alerts', items: ['Notifications', 'Messages']},
+        {category: 'Account', items: ['Account settings', 'Payment methods', 'Udemy credits', 'Purchase history']},
+        {category: 'Profile', items: ['Public profile', 'Edit profile']}
+    ]
+
+mixin dropdownAvatar(props)
+    if props.hideOnMed === true
+        li.nav-item.nav-item--dd.position-relative.flex-shrink-0.d-none.d-md-block
+            +dropdownBody(props)
+    else
+        li.nav-item.nav-item--dd.position-relative.flex-shrink-0
+            +dropdownBody(props)
+
+mixin dropdownBody(props)
+    //- ICON
+    a.nav-link(href='#')
+        img(src=`${navImgSrc}/${props.name}`, width=32, height=32)
+    //- DD CONTENT
+    .nav-item--dd__dd.nav-item--dd__dd--text.position-absolute.top-100.end-0.text-center.bg-white.rounded-5
+        each ddGroupItems in ddItems
+            ul.list-group.border-bottom.border-bottom-1
+                if ddGroupItems.category 
+                    h5.mt-3.ms-3.text-start= ddGroupItems.category
+                each item in ddGroupItems.items
+                    a.list-group-item.list-group-item-action.text-start.border.border-0(href='#')= item
+    

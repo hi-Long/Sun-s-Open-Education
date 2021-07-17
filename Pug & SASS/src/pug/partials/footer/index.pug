@@ -1,0 +1,22 @@
+-   const companyLogos = ['lyft', 'adidas', 'eventbrite', 'survey-monkey', 'booking']
+
+//- FOOTER NAV LIST MIXIN
+mixin navList(itemList)
+    .col-4
+        ul.list-group-item.bg-inherit 
+            each item in itemList
+                a.list-group-item.bg-inherit.text-white.ps-0= item
+
+//- FOOTER 
+footer.bg-black.text-white.pt-4.mt-5 
+    .company.container-fluid.row.mb-3.mb-md-0
+        p.col-12.col-md-6.fs-4.fw-bold   Top companies choose Udemy to build in-demand career skills 
+        .company__logos.col-12.col-md-6.d-flex.justify-content-between.align-items-center
+            each logo in companyLogos
+                img(src=`../../../../assets/icons/${logo}.svg`)
+    .footer__nav.row.border.border-top-1
+        +navList(['Udemy Business', 'Teach on Udemy', 'Get the app', 'About us', 'Contact us'])
+        +navList(['Careers', 'Blog', 'Help and Support', 'Affiliate'])
+        +navList(['Terms', 'Privacy policy', 'Sitemap'])
+
+

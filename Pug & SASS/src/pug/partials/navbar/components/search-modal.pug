@@ -1,0 +1,17 @@
+.modal--search.modal.fade#searchModal(
+    tabindex="-1",
+    aria-labelledby="searchModal",
+    aria-hidden="true"
+)
+    .modal-dialog.modal-fullscreen 
+        .modal-content 
+            .modal-header 
+                include ./search-bar
+                +searchForm('smodal')
+                button.btn-close(
+                    type="button",
+                    data-bs-dismiss="modal",
+                    aria-label="Close"
+                )
+            .modal-body 
+                include ./search-suggestions

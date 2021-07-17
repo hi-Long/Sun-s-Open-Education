@@ -1,0 +1,77 @@
+-   
+    const navItems = [
+        {
+            name: 'Udemy for Business',
+            content: 'Get your team access to over 5,500 top Udemy courses, anytime, anywhere.',
+            redirect: 'Try Udemy for Businness',
+            style: 'text'
+        },
+        {
+            name: 'Teach on Udemy',
+            content: 'Turn what you know into an opportunity and reach millions around the world.',
+            redirect: 'Learn more',
+            style: 'text'
+        },
+        {
+            name: 'My learning',
+            content: 'Learning and change the world.',
+            redirect: 'Go to my learning',
+            style: 'text'
+        },
+        {
+            name: 'like.svg',
+            content: 'Your wishlist is empty.',
+            redirect: 'Explore course',
+            style: 'icon',
+            hideOnMed: true
+        },
+        {
+            name: 'cart.svg',
+            content: 'Your cart is empty.',
+            redirect: 'Keep shopping',
+            style: 'icon'
+        },
+        {
+            name: 'notification.svg',
+            content: 'You have no notification.',
+            style: 'icon',
+            hideOnMed: true
+        },
+        {
+            name: 'avatar.svg',
+            style: 'avatar',
+            hideOnMed: true
+        }]
+        //- 'like', 'card', 'notification', 'avatar']
+-   const navImgSrc = '../../../../../assets/icons'
+
+.nav__upper.d-flex.justify-content-between.p-3.pb-0
+    //- LEFT NAV ITEMS
+    .nav__upper-left.d-flex.mb-2.flex-grow-auto.flex-md-grow-1
+        button.navbar-toggler.border-0.d-block.d-md-none(type="button", data-bs-toggle="modal", data-bs-target="#navModal") 
+            span.navbar-toggler-icon 
+        a.navbar-brand(href='#').d-flex.algin-items-center.d-none.d-md-block 
+            img.nav__upper-logo(src=`${navImgSrc}/logo-coral.svg`, alt="logo")
+        //- SEARCH BAR
+        .sbar-ctn.flex-grow-1.d-flex.flex-align-items-center.d-none.d-md-flex
+            include ../components/search-bar
+            +searchForm('nav')
+    //- LOGO WHEN IN RESPONSIVE
+    a.navbar-brand(href='#').d-flex.algin-items-center.d-block.d-md-none.m-0 
+        img.nav__upper-logo(src=`${navImgSrc}/logo-coral.svg`, alt="logo")
+    //- RIGHT NAV ITEMS
+    .nav__upper-right 
+        ul.navbar-nav.h-100.flex-row
+            button.btn.btn--search.d-block.d-md-none.bg-inherit(
+                type='button'
+                data-bs-toggle="modal",
+                data-bs-target="#searchModal")
+                img.icon.icon--nav.m-0(
+                    src=`${navImgSrc}/search.svg`,
+                    alt="")
+            each item in navItems 
+                include ../components/dropdown/dropdown-item
+                +navItem(true, item)
+
+                
+                

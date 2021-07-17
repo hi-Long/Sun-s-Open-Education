@@ -1,0 +1,26 @@
+@use '../../../base/global' as g;
+@use '../../../base/mixins' as m;
+@use '../../../base/variables' as v;
+@use './course-detail';
+@use './course-overview';
+
+.carousel {
+    &--courses {
+        .course {
+            cursor: pointer;
+            padding-right: 2rem;
+            
+            &:last-child{
+                padding-right: 0!important;
+            }
+            
+            &:hover > .course__details {
+                @include m.transitionDoneProps(
+                    $backgroundColor: white,
+                    $transform: scale(1),
+                    $zIndex: 50
+                )
+            }
+        }
+    }
+}

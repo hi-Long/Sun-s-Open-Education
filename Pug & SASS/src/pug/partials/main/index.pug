@@ -1,0 +1,926 @@
+-   
+    const carousels = [
+        {   
+            carousel: 'Recommended for you',
+            id: 'recommend',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        },
+        {   
+            carousel: 'Students are viewing',
+            id:'viewing',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        },
+        {   
+            carousel: 'Because you searched for Web',
+            id: 'search',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        },
+        {   
+            carousel: 'Top course in Next.js',
+            id: 'top',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        },
+        {   
+            carousel: 'Top course in Machine learning',
+            id: 'ml',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        },
+        {   
+            carousel: 'Short and sweet courses for you',
+            id: 'short',
+            courses: [
+                {
+                    i: 1,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11546372/media/2486347d1e990c61456b61e2040ed78c.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 2,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1205252/screenshots/15939209/media/8487bc695767be56ba459b70dc36313e.jpg?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 3,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/9976016/media/6a6ae351b739fbbd1f9a550524e10597.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 4,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/11143535/media/8f35ab2dec552ef831611a27b1255f2d.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Bestseller',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                },
+                {
+                    i: 5,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/13725077/media/a3cda8290b9beb14991411b2ab7ce153.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 6,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/15525960/media/ca7447bdd4c1e607f08739c6ad7ff021.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'Hot&New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {
+                    i: 7,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/14320957/media/d1cf37b04e4c199d1f4ed66c4ce2e659.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ]
+                },
+                {   
+                    i: 8,
+                    title: 'Modern React with Redux',
+                    cover: 'https://cdn.dribbble.com/users/1044993/screenshots/10836458/media/854c7009e7b2110db79585b0878b66e8.png?compress=1&resize=1600x1200',
+                    tutors: ['Dr.Cat, ', ' Dr.Rat, ', 'Dr.Mouse ', 'and Dr.Horse'],
+                    rate: 4,
+                    noVotes: 12345,
+                    price: 94,
+                    tag: 'New',
+                    lastUpdated: 'June 2021',
+                    length: 52,
+                    shortDescription: 'Master React and Redux with React Router, Webpack, and Create-React-App. Includes Hooks!',
+                    goals: [
+                        'Build amazing single page applications with React JS and Redux',
+                        'Master fundamental concepts behind structuring Redux applications',
+                        'Realize the power of building composable components'
+                    ],
+                    lastCard: true
+                }
+            ]
+        }
+    ]
+    
+main.container-fluid
+    section.introduction
+        include ./parts/introduction
+        h2.fw-bolder.text-center Let's start learning
+        p.text-center   
+            i Never stop learning, because life never stop teaching
+    section.courseCarousels
+        each carousel in carousels
+            include ./parts/courses-carousel
+            +coursesCarousel(carousel)
+    section.suggestions
+        include ./parts/keywords-suggested
+        include ./parts/course-suggested
+    

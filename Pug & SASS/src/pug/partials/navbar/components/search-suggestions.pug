@@ -1,0 +1,22 @@
+-
+    let searchSuggestions = [
+        {id: 1, word: 'Web dev', type: 'search'},
+        {id: 2, word: 'Fullstack development', type: 'search'},
+        {id: 3, word: 'Next.js', type: 'search'},
+        {id: 4, word: 'Bootstrap', type: 'search'},
+        {id: 5, word: 'React', type: 'chapter'},
+        {id: 6, word: 'Python', type: 'chapter'},
+        {id: 7, word: 'Machine Learning', type: 'tutor'},
+        {id: 8, word: 'Nuxt.js', type: 'tutor'}
+    ]
+
+ul.modal__search-suggestions.list-group.border-0 
+    each suggestion in searchSuggestions 
+        li.modal__search-suggestion.list-group-item.mb-3.border-0.bg-white(
+            style=`--suggestion-order: ${suggestion.id}`    
+        )
+            img.icon.me-3(
+                src=`../../../../../assets/icons/${suggestion.type}.svg`,
+                alt='icon',
+            )
+            a.text-inherit(href='#')=    suggestion.word

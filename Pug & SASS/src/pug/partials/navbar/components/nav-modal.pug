@@ -1,0 +1,38 @@
+-   let moreOnUdemy = ['Udemy Business', 'Get the app', 'Invite friends', 'Help']
+-   let accountSettings = ['Public profile', 'Edit Profile', 'Log out']
+-   let modalCategories = ['Development', 'Business', 'Finance & Accounting', 'IT Software', 'Office Productivity', 'Personal Development', 'Design', 'Marketing', 'Fitness & Health', 'Music']
+
+//- MIXIN FOR NAV MODAL ITEMS
+mixin navModalList (listName, toggleTo, items)
+    ul.list-group.mb-3 
+        h5.fw-bolder=    listName
+        each item in items
+            if toggleTo !== ''
+                a.list-group-item.list-group-item-action.list-group-item--nav-modal.border-0.ps-0(
+                    href='#',
+                    data-bs-target=`#${toggleTo}`,
+                    data-bs-toggle="modal", 
+                    data-bs-dismiss="modal")=    item
+            else 
+                a.list-group-item.list-group-item-action.list-group-item--nav-modal.border-0.ps-0=    item
+
+//- MAIN NAV MODAL
+.modal.fade#navModal(aria-hidden="true", aria-labelledby="navModalLabel", tabindex="-1")
+    .modal-dialog.m-0
+        .modal-content.flex-row 
+            .modal-body 
+                +navModalList('My Learning', '', ['My learning'])
+                +navModalList('Most popular', 'navModal2', modalCategories)
+                +navModalList('More on Udemy', '', moreOnUdemy)
+                +navModalList('Account setting', '', accountSettings)
+            button.btn-close.m-3(type="button", data-bs-dismiss="modal", aria-label="Close")
+
+//- SUB CATEGORIES MODAL
+.modal.fade#navModal2(aria-hidden="true", aria-labelledby="navModalLabel2", tabindex="-1")
+    .modal-dialog.h-100.m-0
+        .modal-content.h-100.w-max.flex-row
+            .modal-body                 
+                +navModalList('Subcategories', 'navModal', categories[0].subCates)
+            button.btn-close.m-3(type="button", data-bs-dismiss="modal", aria-label="Close")
+
+

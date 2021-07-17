@@ -1,0 +1,107 @@
+mixin coursesCarousel(props)
+    div.slider.mb-5
+        .h4.mb-4.fw-bolder= props.carousel
+        +carouselItems-xs(props)
+        +carouselItems-sm(props)
+        +carouselItems-md(props)
+        +carouselItems-lg(props)
+        
+//- FOR XS SCREEN
+mixin carouselItems-xs(props)
+    .carousel--courses.carousel.slide.d-block.d-sm-none(
+            id=`${props.id}-xs`
+            data-bs-ride="carousel"
+        )
+        .carousel-inner.p-0.overflow-visible
+            .carousel-item.active
+                .row.m-0
+                    include ../components/course
+                    +course(props.courses[0])
+            each course in props.courses.slice(1)
+                .carousel-item
+                    .row.m-0
+                        include ../components/course
+                        +course(course)
+        +carouselButtons(`${props.id}-xs`)
+
+//- FOR SM SCREEN
+mixin carouselItems-sm(props)
+    .carousel--courses.carousel.slide.d-none.d-sm-block.d-md-none(
+            id=`${props.id}-sm`
+            data-bs-ride="carousel",
+            data-bs-interval="false"
+        )
+        .carousel-inner.p-0.overflow-visible.d-none.d-sm-block.d-md-none
+            .carousel-item.active
+                .row.m-0
+                    each course in props.courses.slice(0, 2)
+                        include ../components/course
+                        +course(course)
+            each val in [1, 2, 3]
+                .carousel-item
+                    .row.m-0
+                        each course in props.courses.slice(val * 2, (val + 1) * 2)
+                            include ../components/course
+                            +course(course)
+        +carouselButtons(`${props.id}-sm`)
+
+//- FOR MD SCREEN
+mixin carouselItems-md(props)
+    .carousel--courses.carousel.slide.d-none.d-md-block.d-lg-none(
+        id=`${props.id}-md`,
+        data-bs-ride="carousel",
+        data-bs-interval="false"
+    )
+        .carousel-inner.p-0.overflow-visible.d-none.d-md-block.d-lg-none
+            .carousel-item.active
+                .row.m-0
+                    each course in props.courses.slice(0, 3)
+                        include ../components/course
+                        +course(course)
+            each val in [1, 2]
+                .carousel-item
+                    .row.m-0
+                        each course in props.courses.slice(val * 3, (val + 1) * 3)
+                            include ../components/course
+                            +course(course)
+        +carouselButtons(`${props.id}-md`)
+
+//- FOR LG SCREEN
+mixin carouselItems-lg(props)
+    .carousel--courses.carousel.slide.d-none.d-lg-block(
+        id=`${props.id}-lg`
+        data-bs-ride="carousel",
+        data-bs-interval="false"
+    )
+        .carousel-inner.p-0.overflow-visible.d-none.d-lg-block
+            .carousel-item.active
+                .row.m-0
+                    each course in props.courses.slice(0, 4)
+                        include ../components/course
+                        +course(course)
+            .carousel-item
+                .row.m-0
+                    each course in props.courses.slice(4, 8)
+                        include ../components/course
+                        +course(course)
+        +carouselButtons(`${props.id}-lg`)
+
+mixin carouselButtons(id)
+    button.carousel-control-prev(
+        type="button",
+        data-bs-target=`#${id}` 
+        data-bs-slide="prev"
+    )
+        span.carousel-control-prev-icon(
+            aria-hidden="true"
+        )
+        span.visually-hidden    Previous
+    button.carousel-control-next(
+        type="button",
+        data-bs-target=`#${id}`,
+        data-bs-slide="next"
+    ) 
+        span.carousel-control-next-icon(
+            aria-hidden="true"
+        )
+        span.visually-hidden    Next

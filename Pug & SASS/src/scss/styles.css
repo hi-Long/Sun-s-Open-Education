@@ -1,0 +1,324 @@
+:root .bg-inherit {
+  background-color: inherit !important;
+}
+:root .bg-white {
+  background-color: white !important;
+}
+:root .bg-black {
+  background-color: black !important;
+}
+:root .bg-khaki {
+  background-color: khaki !important;
+}
+:root .bg-lightpink {
+  background-color: lightpink !important;
+}
+:root .text-inherit {
+  color: inherit !important;
+}
+:root .text-dimgray {
+  color: dimgray !important;
+}
+:root .text-goldenrod {
+  color: goldenrod !important;
+}
+:root .text-khaki {
+  color: khaki !important;
+}
+:root .text-white {
+  color: white !important;
+}
+:root .text-darkslategray {
+  color: darkslategray !important;
+}
+:root .text-indianred {
+  color: indianred !important;
+}
+:root .w-150 {
+  width: 150;
+}
+:root .border-lightgray {
+  border-color: lightgray;
+}
+:root .rounded-5 {
+  border-radius: 5px;
+}
+:root .rounded-10 {
+  border-radius: 10px;
+}
+:root .rounded-40 {
+  border-radius: 40px;
+}
+:root .icon-size-logo {
+  width: 5.5rem;
+  height: auto;
+}
+:root .icon-size-1 {
+  width: 1rem;
+  height: auto;
+}
+:root .icon-size-2 {
+  width: 1.5rem;
+  height: auto;
+}
+:root .icon-size-3 {
+  width: 2rem;
+  height: auto;
+}
+:root .icon-size-4 {
+  width: 2.5rem;
+  height: auto;
+}
+
+body {
+  padding-top: 8.5rem;
+  overflow-x: hidden;
+}
+@media (max-width: 768px) {
+  body {
+    padding-top: 6rem;
+  }
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.icon {
+  width: 1rem;
+  height: 1rem;
+}
+.icon--nav {
+  margin: 0 0.5rem;
+  width: 1.5rem;
+  height: auto;
+}
+.icon--course-details, .icon--nav-modal {
+  width: 1.5rem;
+  height: auto;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: inherit;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.list-group-item {
+  color: inherit !important;
+}
+.list-group-item--nav-modal {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: translateX(0);
+  color: currentColor;
+  background-color: currentColor;
+  z-index: inherit;
+  transition: 0.2s;
+}
+.list-group-item--nav-modal:hover {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: translateX(1rem);
+  color: currentColor;
+  background-color: inherit !important;
+  z-index: inherit;
+}
+
+.sbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0.2rem;
+  border: 1px solid lightgray;
+  background-color: inherit;
+}
+.sbar__input {
+  flex-grow: 1;
+  margin-right: 0.5rem;
+  line-height: 2rem;
+}
+.sbar--nav {
+  width: 90%;
+}
+
+.modal--search .modal-content .modal-body .modal__search-suggestions .modal__search-suggestion {
+  background-color: aqua;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  transform: translateX(-1rem);
+  color: currentColor;
+  background-color: currentColor;
+  z-index: inherit;
+  transition: 0.2s calc(var(--suggestion-order)*0.1s);
+}
+.modal--search .modal-content .modal-header:focus-within ~ .modal-body .modal__search-suggestion {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: translateX(0rem);
+  color: currentColor;
+  background-color: currentColor;
+  z-index: inherit;
+}
+
+.nav-item--dd__dd {
+  width: 20rem;
+  box-shadow: 0px 0px 9px #d9d7d7;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  transform: translateY(1rem) scale(0);
+  color: currentColor;
+  background-color: currentColor;
+  z-index: -1;
+  transition: 0.1s;
+}
+.nav-item--dd__dd .btn-link {
+  color: white;
+  font-weight: 500;
+  font-size: 1.05rem;
+  text-decoration: none;
+}
+.nav-item--dd:hover .nav-item--dd__dd {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  color: currentColor;
+  background-color: currentColor;
+  z-index: 2;
+}
+
+.nav__upper .nav-item {
+  line-height: 2rem;
+}
+.nav__upper-logo {
+  width: 5.5rem;
+  height: auto;
+}
+
+.nav__below-subcategories .nav__below-subcategory {
+  transition: 0.2s;
+}
+.nav__below-subcategories .nav__below-subcategory:hover {
+  background-color: white !important;
+  color: black !important;
+}
+
+.nav__below {
+  z-index: 2;
+  background-color: whitesmoke;
+}
+.nav__below-category-ctn {
+  height: 100%;
+  cursor: pointer;
+}
+.nav__below-category-ctn .nav__below-subcategories {
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  transform: scale(1);
+  color: white;
+  background-color: black;
+  z-index: -1;
+  transition: 0.2s;
+}
+.nav__below-category-ctn:hover {
+  color: #80C1CB;
+}
+.nav__below-category-ctn:hover .nav__below-subcategories {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: scale(1);
+  color: white;
+  background-color: black;
+  z-index: 1;
+}
+
+nav {
+  box-shadow: 0px 6px 14px lightgray;
+  z-index: 1000;
+}
+nav .nav-item {
+  display: flex;
+  justify-content: center;
+}
+
+.intro__jumbotron {
+  box-shadow: 1px 1px 14px lightgray;
+}
+
+.course__details {
+  width: 22rem;
+  box-shadow: 2px 2px 10px 2px lightgrey;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  -o-opacity: 0;
+  opacity: 0;
+  transform: scale(0.8);
+  color: currentColor;
+  background-color: white;
+  z-index: -1;
+  transition: 0.15s;
+}
+.course__details--right .card-body::before {
+  content: "";
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: -1rem;
+  width: 0;
+  height: 0;
+  border: 0.5rem solid transparent;
+  border-right: 0.5rem solid white;
+}
+.course__details--left .card-body::after {
+  content: "";
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 10%;
+  left: calc(100%);
+  width: 0;
+  height: 0;
+  border: 0.5rem solid transparent;
+  border-left: 0.5rem solid white;
+}
+
+.carousel--courses .course {
+  cursor: pointer;
+  padding-right: 2rem;
+}
+.carousel--courses .course:last-child {
+  padding-right: 0 !important;
+}
+.carousel--courses .course:hover > .course__details {
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  -o-opacity: 1;
+  opacity: 1;
+  transform: scale(1);
+  color: currentColor;
+  background-color: white;
+  z-index: 50;
+}/*# sourceMappingURL=styles.css.map */

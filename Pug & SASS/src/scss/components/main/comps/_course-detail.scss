@@ -1,0 +1,47 @@
+@use '../../../base/global' as g;
+@use '../../../base/mixins' as m;
+@use '../../../base/variables' as v;
+
+.course__details {
+    width: 22rem;
+    box-shadow: 2px 2px 10px 2px lightgrey;
+    @include m.transitionPreviousProps(
+        $backgroundColor: white,
+        $transform: scale(0.8),
+        $transition: .15s,
+        $zIndex: -1
+    );
+
+    &--right {
+        .card-body::before {
+            content: '';
+            @include m.position(
+                $position: absolute,
+                $left: -1rem,
+                $top: 10%
+            );
+            @include m.arrow(
+                $direction: left,
+                $size: .5rem,
+                $backgroundColor: white
+            )
+        }
+    }
+
+    &--left {
+        .card-body::after {        
+            content: '';
+            @include m.position(
+                $position: absolute,
+                $left: calc(100%),
+                $top: 10%
+            );
+            @include m.arrow(
+                $direction: right,
+                $size: .5rem,
+                $backgroundColor: white
+            )
+        }
+    }
+}
+

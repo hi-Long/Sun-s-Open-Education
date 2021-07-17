@@ -1,0 +1,35 @@
+@use '../../../base/variables' as v;
+@use '../../../base/mixins' as m;
+@use './subcategories';
+
+.nav__below {
+    z-index: 2;
+    background-color: whitesmoke;
+    
+    &-category-ctn {
+        height: 100%;
+        cursor: pointer;
+        .nav__below-subcategories {
+            @include m.transitionPreviousProps(
+                    $backgroundColor: black,
+                    $color: white,
+                    $opacity: 0,
+                    $transition: .2s,
+                    $zIndex: -1
+                )
+            }
+            
+            &:hover {
+                color: v.$blue;
+                
+                .nav__below-subcategories{
+                @include m.transitionDoneProps(
+                    $backgroundColor: black,
+                    $color: white,
+                    $opacity: 1,
+                    $zIndex: 1
+                )
+            }
+        }
+    }
+}

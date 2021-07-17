@@ -1,0 +1,8 @@
+mixin courseTag(type)
+    case type 
+        when 'Bestseller'
+            span.course__overview-tag.fs-6.fw-bold.p-1.bg-khaki.rounded=   type   
+        when 'New'
+            span.course__overview-tag.fs-6.fw-bold.p-1.bg-success.text-white.rounded=   type
+        when 'Hot&New'
+            span.course__overview-tag.fs-6.fw-bold.p-1.bg-lightpink.text-indianred.rounded=   type
