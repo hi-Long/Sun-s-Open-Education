@@ -53,11 +53,11 @@
   width: 5.5rem;
   height: auto;
 }
-:root .icon-size-1 {
+:root .icon-size-1, :root .icon {
   width: 1rem;
   height: auto;
 }
-:root .icon-size-2 {
+:root .icon-size-2, :root .icon--course-details, :root .icon--nav-modal, :root .icon--nav {
   width: 1.5rem;
   height: auto;
 }
@@ -85,20 +85,9 @@ body {
   box-shadow: none;
 }
 
-.icon {
-  width: 1rem;
-  height: 1rem;
-}
 .icon--nav {
   margin: 0 0.5rem;
-  width: 1.5rem;
-  height: auto;
 }
-.icon--course-details, .icon--nav-modal {
-  width: 1.5rem;
-  height: auto;
-}
-
 input {
   outline: none;
   border: none;
@@ -207,10 +196,6 @@ a {
 
 .nav__upper .nav-item {
   line-height: 2rem;
-}
-.nav__upper-logo {
-  width: 5.5rem;
-  height: auto;
 }
 
 .nav__below-subcategories .nav__below-subcategory {
