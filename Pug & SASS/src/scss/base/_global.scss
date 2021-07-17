@@ -53,19 +53,16 @@ body {
 }
 
 .icon {
-    width: v.$icon-size-1;
-    height: v.$icon-size-1;
-
+    @extend .icon-size-1;
+    
     &--nav {
         margin: 0 .5rem;
-        width: v.$icon-size-2;
-        height: auto;
+        @extend .icon-size-2;
     }
-
+    
     &--course-details,
     &--nav-modal {
-        width: v.$icon-size-2;
-        height: auto;
+        @extend .icon-size-2;
     }
 }
 
