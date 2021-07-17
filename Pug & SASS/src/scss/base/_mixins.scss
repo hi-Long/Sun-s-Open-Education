@@ -1,5 +1,10 @@
-@mixin button($type, $width, $height, $padding, $margin, $color) {
-    
+@mixin crossBrowser($properties) {
+    @each $property, $css in $properties {
+        -webkit-#{$property} : $css;
+        -moz-#{$property} : $css;
+        -o-#{$property} : $css;
+        #{$property} : $css;
+    } 
 }
 
 @mixin position($position, $top: 0, $left: 0, $padding: 0, $margin: 0, $border: 0, $type: 'none') {
@@ -13,33 +18,32 @@
             @if $type == centerVertical {
                 top: 50%;
                 left: $left;
-                transform: translateY(-50%);
+                @include crossBrowser((transform, translateY(-50%)));
             } @else if $type == centerHorizontal {
                 top: $top;
                 left: 50%;
-                transform: translateX(-50%);
+                @include crossBrowser((transform, translateX(-50%)));
             } @else if $type == center {
                 top: 50%;
                 left: 50%;
-                transform: translate(-50%, -50%);
+                @include crossBrowser((transform, translate(-50%, -50%)));
             } 
         }
     }
 }
 
-@mixin transitionPreviousProps($opacity: 0, $transform, $color: currentColor, $backgroundColor: currentColor, $transition: .2s, $zIndex: inherit) {
-    opacity: $opacity;
-    transform: $transform;
-    color: $color;
-    background-color: $backgroundColor;
+@mixin transitionPreviousProps($opacity: 0, $transform: scale(1), $color: currentColor, $backgroundColor: currentColor, $transition: .2s, $zIndex: inherit) {
+    @include transitionDoneProps($opacity, $transform, $color, $backgroundColor, $zIndex);
     transition: $transition;
-    z-index: $zIndex;
 }
 
-@mixin transitionDoneProps ($opacity: 1, $transform, $color: currentColor, $backgroundColor: currentColor, $zIndex: inherit) {
-    opacity: $opacity;
-    transform: $transform;
-    color: $color;
+@mixin transitionDoneProps ($opacity: 1, $transform: scale(1), $color: currentColor, $backgroundColor: currentColor, $zIndex: inherit) {
+    @include crossBrowser((
+            opacity: $opacity,
+            transform: $transform
+        )
+    );
+    color:  $color;
     background-color: $backgroundColor;
     z-index: $zIndex;
 }
